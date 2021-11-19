@@ -44,7 +44,9 @@ const renderDiagrams = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-  new MutationObserver(renderDiagrams).observe(
-      document.body, {childList: true, subtree: true});
+  if (document.body !== null) {
+    new MutationObserver(renderDiagrams).observe(
+        document.body, {childList: true, subtree: true});
+  }
   renderDiagrams();
 });
