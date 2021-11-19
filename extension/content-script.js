@@ -29,7 +29,11 @@ const renderDiagrams = function() {
         // Mark the element as "processed" to avoid being processed twice.
         element.setAttribute(extensionId, 'processed');
         element.style.display = 'none';
-        const code = element.querySelector('code').textContent;
+        const clonedCodeNode = element.querySelector('code').cloneNode(true);
+        // Remove <del> elements for rich-diff.
+        clonedCodeNode.querySelectorAll('del').forEach(
+            (node) => node.parentNode.removeChild(node));
+        const code = clonedCodeNode.textContent;
         try {
           mermaid.render(idGenerator.next().value, code, (svgGraph) => {
             // Hide the source code block.
