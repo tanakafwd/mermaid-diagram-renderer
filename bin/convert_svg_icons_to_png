@@ -7,4 +7,5 @@ yarn install --dev --frozen-lockfile --silent
 
 yarn run svgexport docs/images/icon128.svg extension/images/icon128.png
 yarn run svgexport docs/images/icon48.svg extension/images/icon48.png
+yarn run svgexport docs/images/icon32.svg extension/images/icon32.png
 yarn run svgexport docs/images/icon16.svg extension/images/icon16.png
