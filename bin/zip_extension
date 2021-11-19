@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail -o posix
+
+cd "$(git rev-parse --show-toplevel)"
+
+if ! git diff --quiet HEAD; then
+  echo 'Commit your change first.'
+  exit 1
+fi
+
+./bin/lint
+
+extension_version="$(jq .version --raw-output --exit-status ./extension/manifest.json)"
+if [ -z "${extension_version}" ]; then
+  echo '"version" is empty in ./extension/manifest.json'
+  exit 1
+fi
+
+commit_hash="$(git log -1 --format='%h')"
+
+mkdir -p build
+output_file_path="./build/extension_${extension_version}_${commit_hash}.zip"
+
+(cd extension; git archive --format=zip HEAD .) > "${output_file_path}"
+
+echo "Generated \"${output_file_path}\""

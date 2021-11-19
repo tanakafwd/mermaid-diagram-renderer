@@ -1,0 +1,14 @@
+{
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-json": "^3.1.0",
+    "jest": "^27.3.1",
+    "puppeteer": "^11.0.0",
+    "svgexport": "^0.4.2"
+  },
+  "dependencies": {
+    "mermaid": "8.13.3"
+  }
+}

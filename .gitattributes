@@ -1,0 +1,3 @@
+[attr]autogen -diff -merge -text
+*.min.js autogen
+yarn.lock autogen

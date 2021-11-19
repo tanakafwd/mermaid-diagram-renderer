@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail -o posix
+
+cd "$(git rev-parse --show-toplevel)"
+
+MERMAID_VERSION="$1"
+
+# Add the version to package.json to make dependabot notify security
+# vulnerabilities.
+yarn add "mermaid@${MERMAID_VERSION}"
+
+# Download mermaid.
+rm -f ./extension/third-party/*
+url_base="https://unpkg.com/mermaid@${MERMAID_VERSION}/dist/"
+license_file_name='mermaid.min.js.LICENSE.txt'
+license_file_url="${url_base}${license_file_name}"
+curl "${license_file_url}" --output "extension/third-party/${license_file_name}" --silent --fail
+mermaid_file_name='mermaid.min.js'
+mermaid_file_url="${url_base}${mermaid_file_name}"
+curl "${mermaid_file_url}" --output "extension/third-party/${mermaid_file_name}" --silent --fail
+
+# Update documents.
+sed -i .bak "s/(mermaid@[^)]*)/(mermaid@${MERMAID_VERSION})/" ./extension/manifest.json
+rm -f ./extension/manifest.json.bak
+sed -i .bak "s/(mermaid@[^)]*)/(mermaid@${MERMAID_VERSION})/" ./README.md
+rm -f ./README.md.bak
+{
+  echo "# mermaid@${MERMAID_VERSION}"
+  echo ''
+  echo "- <${license_file_url}>"
+  echo "- <${mermaid_file_url}>"
+} >> ./extension/third-party/README.md
