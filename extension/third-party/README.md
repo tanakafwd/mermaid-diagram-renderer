@@ -1,4 +1,4 @@
-# mermaid@8.13.3
+# mermaid@8.13.4
 
-- <https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js.LICENSE.txt>
-- <https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js>
+- <https://unpkg.com/mermaid@8.13.4/dist/mermaid.min.js.LICENSE.txt>
+- <https://unpkg.com/mermaid@8.13.4/dist/mermaid.min.js>
