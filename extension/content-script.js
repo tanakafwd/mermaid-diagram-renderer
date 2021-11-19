@@ -1,6 +1,6 @@
 'use strict';
 
-const EXTENSION_ID = 'mermaid-diagram-renderer';
+const extensionId = 'mermaid-diagram-renderer';
 
 mermaid.initialize({
   startOnLoad: false,
@@ -12,7 +12,7 @@ mermaid.initialize({
 const idGenerator = function* () {
   let i = 1;
   while (true) {
-    yield `${EXTENSION_ID}-${i}`;
+    yield `${extensionId}-${i}`;
     ++i;
   }
 }();
@@ -21,13 +21,13 @@ const idGenerator = function* () {
 const renderDiagrams = function() {
   document.querySelectorAll(
       // "not(.unchanged)" for rich-diff.
-      `pre[lang="mermaid"]:not(.unchanged):not([${EXTENSION_ID}="processed"])`,
+      `pre[lang="mermaid"]:not(.unchanged):not([${extensionId}="processed"])`,
   ).forEach(
       (element) => {
         const container = document.createElement('div');
         element.after(container);
         // Mark the element as "processed" to avoid being processed twice.
-        element.setAttribute(EXTENSION_ID, 'processed');
+        element.setAttribute(extensionId, 'processed');
         element.style.display = 'none';
         const code = element.querySelector('code').textContent;
         try {
