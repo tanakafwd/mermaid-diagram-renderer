@@ -10,6 +10,7 @@ The following mermaid code comes from <https://mermaid-js.github.io/mermaid/>.
 graph TD;
     A-->B;
     A-->C;
+    A-->D;
     B-->D;
     C-->D;
 ```
@@ -18,6 +19,7 @@ graph TD;
 graph TD;
     A-->B;
     A-->C;
+    A-->D;
     B-->D;
     C-->D;
 ```
@@ -28,28 +30,28 @@ graph TD;
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    Alice->>Carol: Hello Carol, how are you?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        Carol->>Carol: Fight against hypochondria
     end
-    Note right of John: Rational thoughts <br/>prevail!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    Note right of Carol: Rational thoughts <br/>prevail!
+    Carol-->>Alice: Great!
+    Carol->>Bob: How about you?
+    Bob-->>Carol: Jolly good!
 ```
 
 ```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    Alice->>Carol: Hello Carol, how are you?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        Carol->>Carol: Fight against hypochondria
     end
-    Note right of John: Rational thoughts <br/>prevail!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    Note right of Carol: Rational thoughts <br/>prevail!
+    Carol-->>Alice: Great!
+    Carol->>Bob: How about you?
+    Bob-->>Carol: Jolly good!
 ```
 
 ## Gantt Diagram
@@ -58,11 +60,11 @@ sequenceDiagram
 gantt
 dateFormat  YYYY-MM-DD
 title Adding GANTT diagram to mermaid
-excludes weekdays 2014-01-10
+excludes weekdays 2021-01-10
 
 section A section
-Completed task            :done,    des1, 2014-01-06,2014-01-08
-Active task               :active,  des2, 2014-01-09, 3d
+Completed task            :done,    des1, 2021-01-06,2021-01-08
+Active task               :active,  des2, 2021-01-09, 3d
 Future task               :         des3, after des2, 5d
 Future task2              :         des4, after des3, 5d
 ```
@@ -71,11 +73,11 @@ Future task2              :         des4, after des3, 5d
 gantt
 dateFormat  YYYY-MM-DD
 title Adding GANTT diagram to mermaid
-excludes weekdays 2014-01-10
+excludes weekdays 2021-01-10
 
 section A section
-Completed task            :done,    des1, 2014-01-06,2014-01-08
-Active task               :active,  des2, 2014-01-09, 3d
+Completed task            :done,    des1, 2021-01-06,2021-01-08
+Active task               :active,  des2, 2021-01-09, 3d
 Future task               :         des3, after des2, 5d
 Future task2              :         des4, after des3, 5d
 ```
