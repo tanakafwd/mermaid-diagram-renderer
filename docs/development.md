@@ -8,7 +8,7 @@
 
 ## Installation
 
-See [Installation](/private-chrome-extension#installation) in `README.md`.
+See [Installation](/README.md#installation) in `README.md`.
 
 ## Update the embedded mermaid version
 
