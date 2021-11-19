@@ -32,8 +32,8 @@ Example usage to update the embedded mermaid to `8.13.3`.
 
 ## Convert SVG icons into PNG images
 
-Convert SVG images for icons in [docs/images](/docs/images) into PNG images in
-[extension/images](/extension/images).
+Convert SVG images for icons in [`docs/images`](/docs/images) into PNG images in
+[`extension/images`](/extension/images).
 
 ```bash
 ./bin/convert_svg_icons_to_png
