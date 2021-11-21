@@ -11,13 +11,32 @@ describe(
       const numDiagramsInTestGitHubPage = 7;
 
       let page;
+      const requestedDomains = [];
+      const expectedRequestDomains = [
+        'avatars.githubusercontent.com',
+        'collector.githubapp.com',
+        'github.com',
+        'github.githubassets.com',
+      ];
       beforeAll(async () => {
         page = await global.__BROWSER__.newPage();
+        await page.setRequestInterception(true);
+        page.on('request', (interceptedRequest) => {
+          // Capture domains of request URLs to check if the diagram has been
+          // rendered without accessing non-GitHub sites.
+          requestedDomains.push(new URL(interceptedRequest.url()).host);
+          interceptedRequest.continue();
+        });
         await page.goto(testGitHubPageUrl);
       }, timeoutMillis);
 
       afterAll( async () => {
         await page.close();
+      });
+
+      it('should be rendered without accessing non-GitHub sites', async () => {
+        expect(expectedRequestDomains).toEqual(
+            expect.arrayContaining(requestedDomains));
       });
 
       it('should be the expected number of diagrams', async () => {
@@ -64,13 +83,32 @@ describe(
       const numDiagramsInTestGitHubPage = 2;
 
       let page;
+      const requestedDomains = [];
+      const expectedRequestDomains = [
+        'avatars.githubusercontent.com',
+        'collector.githubapp.com',
+        'github.com',
+        'github.githubassets.com',
+      ];
       beforeAll(async () => {
         page = await global.__BROWSER__.newPage();
+        await page.setRequestInterception(true);
+        page.on('request', (interceptedRequest) => {
+          // Capture domains of request URLs to check if the diagram has been
+          // rendered without accessing non-GitHub sites.
+          requestedDomains.push(new URL(interceptedRequest.url()).host);
+          interceptedRequest.continue();
+        });
         await page.goto(testGitHubPageUrl);
       }, timeoutMillis);
 
       afterAll( async () => {
         await page.close();
+      });
+
+      it('should be rendered without accessing non-GitHub sites', async () => {
+        expect(expectedRequestDomains).toEqual(
+            expect.arrayContaining(requestedDomains));
       });
 
       it('should be the expected number of diagrams', async () => {
@@ -118,8 +156,23 @@ describe(
       const numDiagramsInTestGitHubPage = 7;
 
       let page;
+      const requestedDomains = [];
+      const expectedRequestDomains = [
+        'api.github.com',
+        'avatars.githubusercontent.com',
+        'collector.githubapp.com',
+        'github.com',
+        'github.githubassets.com',
+      ];
       beforeAll(async () => {
         page = await global.__BROWSER__.newPage();
+        await page.setRequestInterception(true);
+        page.on('request', (interceptedRequest) => {
+          // Capture domains of request URLs to check if the diagram has been
+          // rendered without accessing non-GitHub sites.
+          requestedDomains.push(new URL(interceptedRequest.url()).host);
+          interceptedRequest.continue();
+        });
         await page.goto(testGitHubPageDirectoryUrl);
         await page.waitForSelector(`a[href="${testGitHubPagePath}"]`);
         await page.click(`a[href="${testGitHubPagePath}"]`);
@@ -128,6 +181,11 @@ describe(
 
       afterAll( async () => {
         await page.close();
+      });
+
+      it('should be rendered without accessing non-GitHub sites', async () => {
+        expect(expectedRequestDomains).toEqual(
+            expect.arrayContaining(requestedDomains));
       });
 
       it('should be the expected number of diagrams', async () => {
@@ -175,8 +233,23 @@ describe(
       const numDiagramsInTestGitHubPage = 2;
 
       let page;
+      const requestedDomains = [];
+      const expectedRequestDomains = [
+        'api.github.com',
+        'avatars.githubusercontent.com',
+        'collector.githubapp.com',
+        'github.com',
+        'github.githubassets.com',
+      ];
       beforeAll(async () => {
         page = await global.__BROWSER__.newPage();
+        await page.setRequestInterception(true);
+        page.on('request', (interceptedRequest) => {
+          // Capture domains of request URLs to check if the diagram has been
+          // rendered without accessing non-GitHub sites.
+          requestedDomains.push(new URL(interceptedRequest.url()).host);
+          interceptedRequest.continue();
+        });
         await page.goto(testGitHubPageDirectoryUrl);
         await page.waitForSelector(`a[href="${testGitHubPagePath}"]`);
         await page.click(`a[href="${testGitHubPagePath}"]`);
@@ -185,6 +258,11 @@ describe(
 
       afterAll( async () => {
         await page.close();
+      });
+
+      it('should be rendered without accessing non-GitHub sites', async () => {
+        expect(expectedRequestDomains).toEqual(
+            expect.arrayContaining(requestedDomains));
       });
 
       it('should be the expected number of diagrams', async () => {
@@ -231,13 +309,32 @@ describe(
       const numDiagramsInTestGistPage = 7;
 
       let page;
+      const requestedDomains = [];
+      const expectedRequestDomains = [
+        'avatars.githubusercontent.com',
+        'collector.githubapp.com',
+        'github.githubassets.com',
+        'gist.github.com',
+      ];
       beforeAll(async () => {
         page = await global.__BROWSER__.newPage();
+        await page.setRequestInterception(true);
+        page.on('request', (interceptedRequest) => {
+          // Capture domains of request URLs to check if the diagram has been
+          // rendered without accessing non-GitHub sites.
+          requestedDomains.push(new URL(interceptedRequest.url()).host);
+          interceptedRequest.continue();
+        });
         await page.goto(testGistPageUrl);
       }, timeoutMillis);
 
       afterAll( async () => {
         await page.close();
+      });
+
+      it('should be rendered without accessing non-GitHub sites', async () => {
+        expect(expectedRequestDomains).toEqual(
+            expect.arrayContaining(requestedDomains));
       });
 
       it('should be the expected number of diagrams', async () => {
@@ -284,13 +381,32 @@ describe(
       const numDiagramsInTestGistPage = 2;
 
       let page;
+      const requestedDomains = [];
+      const expectedRequestDomains = [
+        'avatars.githubusercontent.com',
+        'collector.githubapp.com',
+        'github.githubassets.com',
+        'gist.github.com',
+      ];
       beforeAll(async () => {
         page = await global.__BROWSER__.newPage();
+        await page.setRequestInterception(true);
+        page.on('request', (interceptedRequest) => {
+          // Capture domains of request URLs to check if the diagram has been
+          // rendered without accessing non-GitHub sites.
+          requestedDomains.push(new URL(interceptedRequest.url()).host);
+          interceptedRequest.continue();
+        });
         await page.goto(testGistPageUrl);
       }, timeoutMillis);
 
       afterAll( async () => {
         await page.close();
+      });
+
+      it('should be rendered without accessing non-GitHub sites', async () => {
+        expect(expectedRequestDomains).toEqual(
+            expect.arrayContaining(requestedDomains));
       });
 
       it('should be the expected number of diagrams', async () => {
@@ -338,13 +454,32 @@ describe(
       const numDiagramsInTestGitHubPage = 3;
 
       let page;
+      const requestedDomains = [];
+      const expectedRequestDomains = [
+        'avatars.githubusercontent.com',
+        'collector.githubapp.com',
+        'github.com',
+        'github.githubassets.com',
+      ];
       beforeAll(async () => {
         page = await global.__BROWSER__.newPage();
+        await page.setRequestInterception(true);
+        page.on('request', (interceptedRequest) => {
+          // Capture domains of request URLs to check if the diagram has been
+          // rendered without accessing non-GitHub sites.
+          requestedDomains.push(new URL(interceptedRequest.url()).host);
+          interceptedRequest.continue();
+        });
         await page.goto(testGitHubPageUrl);
       }, timeoutMillis);
 
       afterAll( async () => {
         await page.close();
+      });
+
+      it('should be rendered without accessing non-GitHub sites', async () => {
+        expect(expectedRequestDomains).toEqual(
+            expect.arrayContaining(requestedDomains));
       });
 
       it('should be the expected number of diagrams', async () => {
