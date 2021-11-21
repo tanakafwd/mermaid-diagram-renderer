@@ -4,7 +4,11 @@ An extension for Google Chrome and Chromium to render
 [mermaid](https://github.com/mermaid-js/mermaid) diagrams in markdown files in
 GitHub (`https://github.com/*`) and GitHub Gist (`https://gist.github.com/*`).
 
-The embedded mermaid version: (mermaid@8.13.4)
+## Features
+
+- Render mermaid code blocks without sending the mermaid code to non-GitHub
+  services, which is suitable for private repositories and corporate data.
+- The embedded mermaid version: (mermaid@8.13.4)
 
 ## Usage example
 
