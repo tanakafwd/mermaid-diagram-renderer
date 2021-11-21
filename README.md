@@ -1,4 +1,4 @@
-# Mermaid diagram renderer for GitHub ![check workflow](https://github.com/tanakafwd/mermaid-diagram-renderer/actions/workflows/check.yaml/badge.svg?branch=main)
+# Mermaid diagram renderer for GitHub ![test workflow](https://github.com/tanakafwd/mermaid-diagram-renderer/actions/workflows/test.yaml/badge.svg?branch=main)
 
 An extension for Google Chrome and Chromium to render
 [mermaid](https://github.com/mermaid-js/mermaid) diagrams in markdown files in

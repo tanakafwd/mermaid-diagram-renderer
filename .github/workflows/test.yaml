@@ -1,4 +1,4 @@
-name: Check
+name: Test
 on:
   push:
     branches:
@@ -6,8 +6,8 @@ on:
   pull_request:
 
 jobs:
-  check:
-    name: Check
+  test:
+    name: Test
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
