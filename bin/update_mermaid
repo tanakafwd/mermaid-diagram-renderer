@@ -25,7 +25,9 @@ rm -f ./extension/manifest.json.bak
 sed -i .bak "s/(mermaid@[^)]*)/(mermaid@${MERMAID_VERSION})/" ./README.md
 rm -f ./README.md.bak
 {
-  echo "# mermaid@${MERMAID_VERSION}"
+  echo '# Third-party libraries'
+  echo ''
+  echo "## mermaid@${MERMAID_VERSION}"
   echo ''
   echo "- <${license_file_url}>"
   echo "- <${mermaid_file_url}>"
