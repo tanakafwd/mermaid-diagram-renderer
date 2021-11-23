@@ -29,9 +29,9 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Lint
-        run: ./bin/lint
+        run: ./tools/lint
 
       # Run tests with X virtual framebuffer because Chrome extensions only work
       # in non-headless mode.
       - name: Test
-        run: xvfb-run --server-args='-screen 0 1366x768x24' ./bin/test
+        run: xvfb-run --server-args='-screen 0 1366x768x24' ./tools/test
