@@ -15,19 +15,19 @@ See [Installation](/README.md#installation) in `README.md`.
 Example usage to update the embedded mermaid to `8.13.3`.
 
 ```bash
-./bin/update_mermaid 8.13.3
+./tools/update_mermaid 8.13.3
 ```
 
 ## Format code
 
 ```bash
-./bin/format
+./tools/format
 ```
 
 ## Check code
 
 ```bash
-./bin/lint
+./tools/lint
 ```
 
 ## Convert SVG icons into PNG images
@@ -36,7 +36,7 @@ Convert SVG images for icons in [`docs/images`](/docs/images) into PNG images in
 [`extension/images`](/extension/images).
 
 ```bash
-./bin/convert_svg_icons_to_png
+./tools/convert_svg_icons_to_png
 ```
 
 ## Test extension
@@ -44,11 +44,11 @@ Convert SVG images for icons in [`docs/images`](/docs/images) into PNG images in
 The following command will launch a Chromium browser for testing.
 
 ```bash
-./bin/test
+./tools/test
 ```
 
 ## Zip extension
 
 ```bash
-./bin/zip_extension
+./tools/zip_extension
 ```
