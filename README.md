@@ -9,7 +9,7 @@ GitHub (`https://github.com/*`) and GitHub Gist (`https://gist.github.com/*`).
 - The extension renders mermaid code blocks without sending the mermaid code to
   non-GitHub services, which is suitable for private repositories and corporate
   data.
-- The embedded mermaid version: (mermaid@8.13.4)
+- The embedded mermaid version: (mermaid@8.13.5)
 
 ## Usage example
 
