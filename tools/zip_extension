@@ -8,7 +8,7 @@ if ! git diff --quiet HEAD; then
   exit 1
 fi
 
-./bin/lint
+./tools/lint
 
 extension_version="$(jq .version --raw-output --exit-status ./extension/manifest.json)"
 if [ -z "${extension_version}" ]; then
