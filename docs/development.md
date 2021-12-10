@@ -8,7 +8,17 @@
 
 ## Installation
 
-See [Installation](/README.md#installation) in `README.md`.
+1. Clone this repository.
+
+    ```bash
+    git clone https://github.com/tanakafwd/mermaid-diagram-renderer.git
+    ```
+
+1. Open `chrome://extensions` in your Google Chrome or Chromium.
+1. Enable `Developer mode`.
+1. Click `Load unpacked`.
+1. Select the [`extension`](/extension) directory in the cloned repository.
+1. Open [the test page](/tests/pages/valid.md) to check if the extension works.
 
 ## Update the embedded mermaid version
 

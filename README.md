@@ -61,17 +61,15 @@ sequenceDiagram
 
 ## Installation
 
-1. Clone this repository.
+### From the Chrome Web Store
 
-    ```bash
-    git clone https://github.com/tanakafwd/mermaid-diagram-renderer.git
-    ```
-
-1. Open `chrome://extensions` in your Google Chrome or Chromium.
-1. Enable `Developer mode`.
-1. Click `Load unpacked`.
-1. Select the [`extension`](/extension) directory in the cloned repository.
+1. Open the store page for [Mermaid diagram renderer for GitHub](https://chrome.google.com/webstore/detail/ahhjfofclhjllmiglebianajpmkabcbc).
+1. Click `Add to Chrome`.
 1. Open [the test page](/tests/pages/valid.md) to check if the extension works.
+
+### From source code
+
+See [Installation](/docs/development.md#installation) in the development page.
 
 ## Development
 
