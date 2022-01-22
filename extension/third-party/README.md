@@ -1,6 +1,6 @@
 # Third-party libraries
 
-## mermaid@8.13.9
+## mermaid@8.13.10
 
-- <https://unpkg.com/mermaid@8.13.9/dist/mermaid.min.js.LICENSE.txt>
-- <https://unpkg.com/mermaid@8.13.9/dist/mermaid.min.js>
+- <https://unpkg.com/mermaid@8.13.10/dist/mermaid.min.js.LICENSE.txt>
+- <https://unpkg.com/mermaid@8.13.10/dist/mermaid.min.js>
