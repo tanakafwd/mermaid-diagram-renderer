@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Mermaid diagram renderer for GitHub",
-  "version": "1.0.3",
-  "description": "Render mermaid diagrams in markdown files in GitHub and GitHub Gist (mermaid@8.13.9).",
+  "version": "1.0.4",
+  "description": "Render mermaid diagrams in markdown files in GitHub and GitHub Gist (mermaid@8.13.10).",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
