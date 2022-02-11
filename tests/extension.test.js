@@ -14,7 +14,7 @@ describe(
       const requestedDomains = [];
       const expectedRequestDomains = [
         'avatars.githubusercontent.com',
-        'collector.githubapp.com',
+        'collector.github.com',
         'github.com',
         'github.githubassets.com',
       ];
@@ -86,7 +86,7 @@ describe(
       const requestedDomains = [];
       const expectedRequestDomains = [
         'avatars.githubusercontent.com',
-        'collector.githubapp.com',
+        'collector.github.com',
         'github.com',
         'github.githubassets.com',
       ];
@@ -160,7 +160,7 @@ describe(
       const expectedRequestDomains = [
         'api.github.com',
         'avatars.githubusercontent.com',
-        'collector.githubapp.com',
+        'collector.github.com',
         'github.com',
         'github.githubassets.com',
       ];
@@ -237,7 +237,7 @@ describe(
       const expectedRequestDomains = [
         'api.github.com',
         'avatars.githubusercontent.com',
-        'collector.githubapp.com',
+        'collector.github.com',
         'github.com',
         'github.githubassets.com',
       ];
@@ -312,7 +312,7 @@ describe(
       const requestedDomains = [];
       const expectedRequestDomains = [
         'avatars.githubusercontent.com',
-        'collector.githubapp.com',
+        'collector.github.com',
         'github.githubassets.com',
         'gist.github.com',
       ];
@@ -384,7 +384,7 @@ describe(
       const requestedDomains = [];
       const expectedRequestDomains = [
         'avatars.githubusercontent.com',
-        'collector.githubapp.com',
+        'collector.github.com',
         'github.githubassets.com',
         'gist.github.com',
       ];
@@ -457,7 +457,7 @@ describe(
       const requestedDomains = [];
       const expectedRequestDomains = [
         'avatars.githubusercontent.com',
-        'collector.githubapp.com',
+        'collector.github.com',
         'github.com',
         'github.githubassets.com',
       ];
