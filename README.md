@@ -1,5 +1,9 @@
 # Mermaid diagram renderer for GitHub ![test workflow](https://github.com/tanakafwd/mermaid-diagram-renderer/actions/workflows/test.yaml/badge.svg?branch=main)
 
+**NOTE**: [As announced at 2022-02-14](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/),
+now GitHub officially supports Mermaid code blocks in Markdown files.
+You no longer need to install this Chrome extension in most cases.
+
 An extension for Google Chrome and Chromium to render
 [mermaid](https://github.com/mermaid-js/mermaid) diagrams in markdown files in
 GitHub (`https://github.com/*`) and GitHub Gist (`https://gist.github.com/*`).
