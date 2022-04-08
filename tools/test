@@ -6,4 +6,4 @@ cd "$(git rev-parse --show-toplevel)"
 yarn install --dev --frozen-lockfile --silent
 
 # This command will launch a Chromium browser for testing.
-yarn run jest --config=./tests/jest.config.js --detectOpenHandles ./tests
+yarn run jest --config=./tests/jest.config.js --detectOpenHandles --passWithNoTests ./tests
