@@ -9,6 +9,6 @@
     "svgexport": "^0.4.2"
   },
   "dependencies": {
-    "mermaid": "8.14.0"
+    "mermaid": "9.1.2"
   }
 }
